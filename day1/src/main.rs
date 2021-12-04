@@ -3,6 +3,7 @@ use std::io::{self, BufRead};
 
 fn main() {
     let input = File::open("input.txt").expect("can't open input.txt");
+    for (i, line) in io::BufReader::new(input).lines().enumerate() {
 
     let mut prev_value: i64 = 0;
     let mut counter = 0;
